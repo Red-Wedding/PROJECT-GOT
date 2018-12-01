@@ -1,3 +1,5 @@
+/* globals
+gameOfThronesCharacters*/
 function nav() {
   var navElement = document.querySelector('#nav');
   var row =
