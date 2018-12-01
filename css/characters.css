@@ -19,6 +19,37 @@
     padding-top: 12px;
 }
 
+.dropdown-content {
+    display: none;
+    position: relative;
+    right: 380px;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    position: absolute;
+    display: inline-block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #460b0b;
+    color: white;
+}
+
 .container {
     background: white;
     margin: auto;
@@ -29,27 +60,39 @@
 }
 
 .name {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "myFirstFont";
+    size: 30px;
+    font-weight: 550;
+}
+
+.house {
+    font-family: "myFirstFont";
+    font-size: 10px;
 }
 
 .bio {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "myFirstFont";
+    font-size: 12px;
 }
 
 .table {
 
-    background: rgb(219, 51, 51);
+    background-color: rgb(158, 62, 62);
 }
 
+
+
 input[type=button] {
-    background-color: rgb(199, 196, 196);
+    background-color: rgb(171, 172, 172);
     border: 2px;
     border-radius: 10px;
+    cursor: url(/img/cursorDragon.png), auto;
+    font-family: "myFirstFont";
+    font-size: 10px;
     padding: 5px 15px;
-    text-decoration: none;
     margin: 4px 2px;
-    cursor: pointer;
 }
+
 
 footer img {
     position: inline;
@@ -61,9 +104,9 @@ footer img {
 }
 
 .footer {
-    padding: 10px 0 20px 30px;
-    position: relative;
     background-color: rgb(171, 172, 172);
     font-family: "Montserrat", sans-serif;
     font-size: 12px;
+    padding: 10px 0 20px 30px;
+    position: relative;
 }
