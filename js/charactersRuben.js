@@ -39,7 +39,7 @@ function characterPage() {
                                   <td class="portrait"> <img src="${gameOfThronesCharacters[0].portrait}">  </td>
                                   <td class="cimer"> ${cimerJon}</td>
                                   <td class="house"> ${houseJon}</td>
-                                  <td class="bio">${gameOfThronesCharacters[0].bio} </td>
+                                  <td><input type="text-area" class="bio" value="${gameOfThronesCharacters[0].bio}" cols="60" rows="8"> </input></td>
                                   <td class="buttonEdit"> <input type="button" value="edit"> </td>
                                   <td class="buttonDelete"> <input type="button" value="delete"> </td>
                               </tr>
@@ -62,7 +62,7 @@ function characterPage() {
         <td class="portrait"><img src="${gameOfThronesCharacters[i].portrait}"> </td>
         <td class="cimer"> ${cimer}</td>
         <td class="house"> ${house}</td>
-        <td  class="bio">${gameOfThronesCharacters[i].bio} </td>
+        <td><input type="text-area" class="bio" value="${gameOfThronesCharacters[i].bio}" cols="60" rows="8"> </input></td>
         <td class="buttonEdit"> <input type="button" value="edit"> </td>
         <td class="buttonDelete"> <input type="button" value="delete"> </td>
     </tr>

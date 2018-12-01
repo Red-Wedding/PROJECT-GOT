@@ -71,19 +71,29 @@
 }
 
 .bio {
+    background-color: rgb(158, 62, 62);
+    border: 5px solid;
+    border-color: rgb(87, 77, 77);
+    border-radius: 25px;
+    padding: 2px;
+    position: relative;
+    text-align: top;
+    height: 125px;
+    width: 600px;
     font-family: "myFirstFont";
     font-size: 12px;
+    box-shadow: 5px 5px 3px rgb(119, 45, 45);
 }
 
 .table {
-
+    position: relative;
     background-color: rgb(158, 62, 62);
 }
 
 
 
 input[type=button] {
-    background-color: rgb(171, 172, 172);
+    background-color: rgb(117, 95, 95);
     border: 2px;
     border-radius: 10px;
     cursor: url(/img/cursorDragon.png), auto;
@@ -91,6 +101,7 @@ input[type=button] {
     font-size: 10px;
     padding: 5px 15px;
     margin: 4px 2px;
+    box-shadow: 5px 5px 3px rgb(119, 45, 45);
 }
 
 
