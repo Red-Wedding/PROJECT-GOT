@@ -1,17 +1,51 @@
-function deadLiving() {
-  var tableRow = '';
-  var dead = gameOfThronesCharacters.dead === true;
-  for (var i = 0; i < gameOfThronesCharacters.length; i++) {
-    if (dead === true) {
-      tableRow +=
-                `
-                <tr>
-                    <td> ${gameOfThronesCharacters[i].name} </td>
-                    </td>    
-                </tr>        
-            `;
+function sortOn(arr, prop) {
+  arr.sort(function (a, b) {
+    if (a[prop] < b[prop]) {
+      return -1;
+    } else if (a[prop] > b[prop]) {
+      return 1;
     }
-    document.querySelector('#dead-alive').innerHTML = tableRow;
+    return 0;
+  });
+}
+sortOn(gameOfThronesCharacters, 'name');
+
+function living() {
+  var tableRowLiving = 'Living';
+  for (var i = 0; i < gameOfThronesCharacters.length; i++) {
+    if (gameOfThronesCharacters[i].dead !== true) {
+      tableRowLiving += `
+
+      <table>
+          <tbody>
+            <tr>
+              <td>${gameOfThronesCharacters[i].name}</td><br>
+            </tr>
+            </tbody>
+        </table>       
+  `;
+    }
+    document.getElementById('container-living').innerHTML = tableRowLiving;
   }
 }
-deadLiving();
+living();
+
+function dead() {
+  var tableRowDead = 'Dead';
+  for (var i = 0; i < gameOfThronesCharacters.length; i++) {
+    if (gameOfThronesCharacters[i].dead === true) {
+      tableRowDead += `
+
+      <table>
+          <tbody>
+            <tr>
+              <td>${gameOfThronesCharacters[i].name}</td><br>
+            </tr>
+            </tbody>
+        </table>       
+  `;
+    }
+    document.getElementById('container-dead').innerHTML = tableRowDead;
+  }
+}
+dead();

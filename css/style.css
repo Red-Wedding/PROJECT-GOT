@@ -4,7 +4,7 @@
 }
 
 .main-nav {
-  background-color: rgba(256, 256, 256, 0.8);
+  background-color: rgba(256, 256, 256, 1);
   box-sizing: border-box;
   font-family: "myFirstFont";
   font-size: larger;
@@ -156,13 +156,14 @@ footer img {
 .container {
   color: black;
   font-family: "Montserrat", sans-serif;
-  z-index: 2;
   position: relative;
   margin-top: 50px;
-  text-align: center
+  text-align: center;
+  float: left;
+  width: 50%;
 }
 
-.title {
-  font-size: 50px;
-
+div table {
+  position: relative;
+  margin: auto
 }
