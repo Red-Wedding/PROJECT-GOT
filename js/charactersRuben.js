@@ -24,12 +24,11 @@ function nav() {
 
 function characterPage() {
   var characterTablesElement = document.querySelector('#characters');
+  var bioJon = `<textarea class="bio" cols="60" rows="8" onclick="this.focus();this.select()">${gameOfThronesCharacters[0].bio} </textarea>`;
   var cimerJon = '';
-  if (gameOfThronesCharacters[0].house) {
-    cimerJon = `<img src="/img/houses/${gameOfThronesCharacters[0].house}.png"`;
-  }
   var houseJon = '';
   if (gameOfThronesCharacters[0].house) {
+    cimerJon = `<img src="/img/houses/${gameOfThronesCharacters[0].house}.png"`;
     houseJon = `${gameOfThronesCharacters[0].house}`;
   }
   var tableRow =
@@ -39,22 +38,21 @@ function characterPage() {
                                   <td class="portrait"> <img src="${gameOfThronesCharacters[0].portrait}">  </td>
                                   <td class="cimer"> ${cimerJon}</td>
                                   <td class="house"> ${houseJon}</td>
-                                  <td><input type="text-area" class="bio" value="${gameOfThronesCharacters[0].bio}" cols="60" rows="8"> </input></td>
-                                  <td class="buttonEdit"> <input type="button" value="edit"> </td>
-                                  <td class="buttonDelete"> <input type="button" value="delete"> </td>
+                                  <td>${bioJon}</td>
+                                  <td class="buttonEdit"> <input type="button" value="edit" onclick="editBio()"> </td>
+                                  <td class="buttonDelete"> <input type="button" value="delete" onclick="deleteRow()"> </td>
                               </tr>
                           `;
   for (var i = 1; i < gameOfThronesCharacters.length; i++) {
+    var bio = `<textarea class="bio" cols="60" rows="8" onclick="this.focus();this.select()">${gameOfThronesCharacters[i].bio} </textarea>`;
     var cimer = '';
-
+    var house = '';
     if (gameOfThronesCharacters[i].house) {
       cimer = `<img src="/img/houses/${gameOfThronesCharacters[i].house}.png"`;
-    }
-    var house = '';
-
-    if (gameOfThronesCharacters[i].house) {
       house = `${gameOfThronesCharacters[i].house}`;
     }
+
+
     tableRow +=
       `
         <tr >
@@ -62,9 +60,9 @@ function characterPage() {
         <td class="portrait"><img src="${gameOfThronesCharacters[i].portrait}"> </td>
         <td class="cimer"> ${cimer}</td>
         <td class="house"> ${house}</td>
-        <td><input type="text-area" class="bio" value="${gameOfThronesCharacters[i].bio}" cols="60" rows="8"> </input></td>
+        <td>${bio}</td>
         <td class="buttonEdit"> <input type="button" value="edit"> </td>
-        <td class="buttonDelete"> <input type="button" value="delete"> </td>
+        <td class="buttonDelete"> <input type="button" value="delete" onclick="deleteRow()"> </td>
     </tr>
                             `;
   }
@@ -75,16 +73,20 @@ function footer() {
   var footerElement = document.getElementById('footer');
   var row =
     `
-  <p><b>OFFICIAL GAME OF THRONES WEBSITE - team RED WEDDING</b></p>
-  <p>Follow us</p>
-  <a href="http://facebook.com"><img src="/img/facebook.png" alt=""/></a>
-  <a href="http://instagram.com"
-    ><img src="/img/instagram.png" alt=""
-  /></a>
-  <a href="http://youtube.com"><img src="/img/youtube.png" alt=""/></a>
-  <a href="http://twitter.com"><img src="/img/twitter.svg" alt=""/></a>
+    <p><b>OFFICIAL GAME OF THRONES WEBSITE - team RED WEDDING</b></p>
+    <p>Follow us</p>
+    <a href="http://facebook.com"><img src="/img/facebook.png" alt="facebook" /></a>
+    <a href="http://instagram.com"><img src="/img/Instagram.png" alt="Instagram" /></a>
+    <a href="http://youtube.com"><img src="/img/youtube.png" alt="youtube" /></a>
+    <a href="http://twitter.com"><img src="/img/twitter.svg" alt="twitter" /></a>
   `;
   footerElement.innerHTML = row;
+}
+
+function deleteRow() {
+  var td = event.target.parentNode;
+  var tr = td.parentNode;
+  tr.parentNode.removeChild(tr);
 }
 nav();
 characterPage();
