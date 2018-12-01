@@ -1,7 +1,8 @@
 function deadLiving() {
   var tableRow = '';
+  var dead = gameOfThronesCharacters.dead === true;
   for (var i = 0; i < gameOfThronesCharacters.length; i++) {
-    if (gameOfThronesCharacters[i].dead === true) {
+    if (dead === true) {
       tableRow +=
                 `
                 <tr>
