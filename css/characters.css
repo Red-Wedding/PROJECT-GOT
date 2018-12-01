@@ -13,19 +13,47 @@
 }
 
 .main-nav {
-    font-family: "myFirstFont";
     background-color: rgba(256, 256, 256, 0.8);
+    box-sizing: border-box;
+    font-family: "myFirstFont";
+    font-size: larger;
     position: relative;
-    width: 100%;
+    width: 1140px;
     letter-spacing: 3px;
     text-align: center;
-    font-size: larger;
     z-index: 1;
-    box-sizing: border-box;
 }
 
 .menu-bar {
     padding-top: 12px;
+}
+
+.logo {
+    width: 150px;
+}
+
+.menu {
+    float: left;
+    text-decoration: none;
+    vertical-align: bottom;
+    width: 20%;
+}
+
+.menu:link {
+    color: teal;
+}
+
+.menu:visited {
+    color: rgb(0, 54, 54);
+}
+
+.menu:hover {
+    background-color: rgb(129, 129, 129);
+    color: white
+}
+
+.logo:hover {
+    background-color: rgba(256, 256, 256, 0.1);
 }
 
 .dropdown-content {
