@@ -10,7 +10,24 @@
 
 <body>
 
-    <script src="./js/characters.js"></script>
+    <script src="./js/characters.js">
+      function deadLiving() {
+  var tableRow = '';
+  for (var i = 0; i < gameOfThronesCharacters.length; i++) {
+    if (gameOfThronesCharacters[i].name === 'Jon Snow') {
+      tableRow +=
+                  `
+                  <tr>
+                      <td> ${gameOfThronesCharacters[i].name} </td>
+                      </td>    
+                  </tr>        
+              `;
+    }
+    console.log(tableRow);
+    document.querySelector('#dead-alive').innerHTML = tableRow;
+  }
+}
+deadLiving();</script>
     <!-- Innen jössz te :) -->
 </body>
 

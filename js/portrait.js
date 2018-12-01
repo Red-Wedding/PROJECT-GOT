@@ -5,7 +5,7 @@ function namesandportraits() {
   <p>${gameOfThronesCharacters[i].name}</p>
  </div> `;
   }
-  document.querySelector('.container').innerHTML = tomb;
+  document.querySelector('.portraitcontainer').innerHTML = tomb;
 }
 
 
