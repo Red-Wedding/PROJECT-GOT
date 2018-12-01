@@ -24,6 +24,7 @@ function nav() {
 
 function characterPage() {
   var characterTablesElement = document.querySelector('#characters');
+  var bioJon = `<textarea class="bio" cols="60" rows="8">${gameOfThronesCharacters[0].bio} </textarea>`;
   var cimerJon = '';
   if (gameOfThronesCharacters[0].house) {
     cimerJon = `<img src="/img/houses/${gameOfThronesCharacters[0].house}.png"`;
@@ -39,12 +40,13 @@ function characterPage() {
                                   <td class="portrait"> <img src="${gameOfThronesCharacters[0].portrait}">  </td>
                                   <td class="cimer"> ${cimerJon}</td>
                                   <td class="house"> ${houseJon}</td>
-                                  <td><textarea class="bio" cols="60" rows="8">${gameOfThronesCharacters[0].bio} </textarea></td>
+                                  <td>${bioJon}</td>
                                   <td class="buttonEdit"> <input type="button" value="edit"> </td>
-                                  <td class="buttonDelete"> <input type="button" value="delete"> </td>
+                                  <td class="buttonDelete"> <input type="button" value="delete" onclick="characterPage()"> </td>
                               </tr>
                           `;
   for (var i = 1; i < gameOfThronesCharacters.length; i++) {
+    var bio = `<textarea class="bio" cols="60" rows="8">${gameOfThronesCharacters[i].bio} </textarea>`;
     var cimer = '';
 
     if (gameOfThronesCharacters[i].house) {
@@ -62,9 +64,9 @@ function characterPage() {
         <td class="portrait"><img src="${gameOfThronesCharacters[i].portrait}"> </td>
         <td class="cimer"> ${cimer}</td>
         <td class="house"> ${house}</td>
-        <td><textarea class="bio" cols="60" rows="8">${gameOfThronesCharacters[i].bio} </textarea></td>
+        <td>${bio}</td>
         <td class="buttonEdit"> <input type="button" value="edit"> </td>
-        <td class="buttonDelete"> <input type="button" value="delete"> </td>
+        <td class="buttonDelete"> <input type="button" value="delete" onclick="deleteBio()"> </td>
     </tr>
                             `;
   }
@@ -86,6 +88,7 @@ function footer() {
   `;
   footerElement.innerHTML = row;
 }
+
 nav();
 characterPage();
 footer();
