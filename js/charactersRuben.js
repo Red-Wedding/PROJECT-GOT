@@ -6,7 +6,7 @@ function nav() {
   <a class="menu logo" href="index.html"><img src="/img/got logo.png" alt="" width="120px" /></a>
 </div>
 <div class="menu-bar">
-  <a class="menu" href="/html/characters.html">Characters</a>
+  <a class="menu" href="/characters.html" target="_self">Characters</a>
 </div>
 <div class="dropdown">
   <a class="menu dropbtn">Statistics</a>
