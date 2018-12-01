@@ -1,3 +1,27 @@
+function nav() {
+  var navElement = document.querySelector('#nav');
+  var row =
+    `
+  <div class="menu-bar">
+  <a class="menu logo" href="index.html"><img src="/img/got logo.png" alt="" width="120px" /></a>
+</div>
+<div class="menu-bar">
+  <a class="menu" href="/html/characters.html">Characters</a>
+</div>
+<div class="dropdown">
+  <a class="menu dropbtn">Statistics</a>
+  <div class="dropdown-content">
+    <a href="/html/dead_alive.html">Alive/dead</a>
+    <a href="/html/houses.html">Houses</a>
+    <a href="/html/organizations.html">Organizations</a>
+  </div>
+</div>
+<div><a class="menu" href="/html/portraits.html">Portraits</a></div>
+<div><a class="menu" href="/html/gallery.html">Gallery</a></div>
+  `;
+  navElement.innerHTML = row;
+}
+
 function characterPage() {
   var characterTablesElement = document.querySelector('#characters');
   var cimerJon = '';
@@ -47,4 +71,21 @@ function characterPage() {
   characterTablesElement.innerHTML = tableRow;
 }
 
+function footer() {
+  var footerElement = document.getElementById('footer');
+  var row =
+    `
+  <p><b>OFFICIAL GAME OF THRONES WEBSITE - team RED WEDDING</b></p>
+  <p>Follow us</p>
+  <a href="http://facebook.com"><img src="/img/facebook.png" alt=""/></a>
+  <a href="http://instagram.com"
+    ><img src="/img/instagram.png" alt=""
+  /></a>
+  <a href="http://youtube.com"><img src="/img/youtube.png" alt=""/></a>
+  <a href="http://twitter.com"><img src="/img/twitter.svg" alt=""/></a>
+  `;
+  footerElement.innerHTML = row;
+}
+nav();
 characterPage();
+footer();
