@@ -22,47 +22,17 @@ function nav() {
   navElement.innerHTML = row;
 }
 
-function characterPage() {
-  var characterTablesElement = document.querySelector('#characters');
-  var cimerJon = '';
-  if (gameOfThronesCharacters[0].house) {
-    cimerJon = `<img src="/img/houses/${gameOfThronesCharacters[0].house}.png"`;
-  }
-  var houseJon = '';
-  if (gameOfThronesCharacters[0].house) {
-    houseJon = `${gameOfThronesCharacters[0].house}`;
-  }
-  var tableRow =
-    `
-      <tr >
-        <td class="cimer"> almakorte</td>
-        <td class="house"> szilvabarack</td>
-      </tr>
-    `;
+var arrCharactersInHouses = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+var arrHouses = [];
+var und = 0;
+var characterTablesElement = document.querySelector('#characters');
+var arrCharactersInHousesIndex = 0;
 
-
-  var arrHouses = [];
-  var arrCharactersInHouses = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-  var und = 0;
-  var arrCharactersInHousesIndex = 0;
+function housesStatisticCount() {
   for (var i = 1; i < gameOfThronesCharacters.length; i += 1) {
-    var erb = '';
-    var house = '';
-
     if (!arrHouses.includes(gameOfThronesCharacters[i].house) && gameOfThronesCharacters[i].house !== undefined) {
       arrHouses.push(gameOfThronesCharacters[i].house);
       arrCharactersInHouses[arrHouses.length - 1] += 1;
-      erb = `<img src="/img/houses/${gameOfThronesCharacters[i].house}.png"`;
-      house = `${gameOfThronesCharacters[i].house}`;
-      tableRow +=
-        `
-          <tr >
-          <td class="cimer"> ${erb}</td>
-          <td class="house"> ${house}</td>
-          <td class="house"> ${arrCharactersInHouses[arrCharactersInHousesIndex]}</td>
-
-          </tr>
-        `;
       arrCharactersInHousesIndex += 1;
     } else if (gameOfThronesCharacters[i].house !== undefined) {
       switch (gameOfThronesCharacters[i].house) {
@@ -103,10 +73,93 @@ function characterPage() {
       und += 1;
     }
   }
-
   console.log(arrHouses);
   console.log(arrCharactersInHouses);
   console.log(und);
+}
+
+
+function housesTableFill() {
+  var characterTablesElement = document.querySelector('#characters');
+  var cimerJon = '';
+  if (gameOfThronesCharacters[0].house) {
+    cimerJon = `<img src="/img/houses/${gameOfThronesCharacters[0].house}.png"`;
+  }
+  var houseJon = '';
+  if (gameOfThronesCharacters[0].house) {
+    houseJon = `${gameOfThronesCharacters[0].house}`;
+  }
+  var tableRow =
+    `
+      <tr >
+        <td class="cimer"> almakorte</td>
+        <td class="house"> szilvabarack</td>
+      </tr>
+    `;
+
+  var arrHouses = [];
+  var arrCharactersInHousesTwo = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+  var und = 0;
+  var arrCharactersInHousesIndex = 0;
+  for (var i = 1; i < gameOfThronesCharacters.length; i += 1) {
+    var erb = '';
+    var house = '';
+
+    if (!arrHouses.includes(gameOfThronesCharacters[i].house) && gameOfThronesCharacters[i].house !== undefined) {
+      arrHouses.push(gameOfThronesCharacters[i].house);
+      arrCharactersInHousesTwo[arrHouses.length - 1] += 1;
+      erb = `<img src="/img/houses/${gameOfThronesCharacters[i].house}.png"`;
+      house = `${gameOfThronesCharacters[i].house}`;
+      tableRow +=
+        `
+          <tr >
+          <td class="cimer"> ${erb}</td>
+          <td class="house"> ${house}</td>
+          <td class="house"> ${arrCharactersInHouses[arrCharactersInHousesIndex]}</td>
+
+          </tr>
+        `;
+      arrCharactersInHousesIndex += 1;
+    } else if (gameOfThronesCharacters[i].house !== undefined) {
+      switch (gameOfThronesCharacters[i].house) {
+      case (arrHouses[0]):
+        arrCharactersInHousesTwo[0] += 1;
+        break;
+      case (arrHouses[1]):
+        arrCharactersInHousesTwo[1] += 1;
+        break;
+      case (arrHouses[2]):
+        arrCharactersInHousesTwo[2] += 1;
+        break;
+      case (arrHouses[3]):
+        arrCharactersInHousesTwo[3] += 1;
+        break;
+      case (arrHouses[4]):
+        arrCharactersInHousesTwo[4] += 1;
+        break;
+      case (arrHouses[5]):
+        arrCharactersInHousesTwo[5] += 1;
+        break;
+      case (arrHouses[6]):
+        arrCharactersInHousesTwo[6] += 1;
+        break;
+      case (arrHouses[7]):
+        arrCharactersInHousesTwo[7] += 1;
+        break;
+      case (arrHouses[8]):
+        arrCharactersInHousesTwo[8] += 1;
+        break;
+      case (arrHouses[9]):
+        arrCharactersInHousesTwo[9] += 1;
+        break;
+      default:
+        break;
+      }
+    } else {
+      und += 1;
+    }
+  }
+
   characterTablesElement.innerHTML = tableRow;
 }
 
@@ -126,5 +179,6 @@ function footer() {
   footerElement.innerHTML = row;
 }
 nav();
-characterPage();
+housesStatisticCount();
+housesTableFill();
 footer();
