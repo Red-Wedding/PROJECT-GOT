@@ -345,34 +345,3 @@ var gameOfThronesCharacters = [{
 }
 
 ];
-
-function characterPage() {
-  var characterTablesElement = document.querySelector('#characters');
-  var tableRow =
-    `
-                            <tr >
-                                <td class="name">${gameOfThronesCharacters[0].name} </td>
-                                <td class="portrait"> <img src="${gameOfThronesCharacters[0].portrait}">  </td>
-                                <td class="picture"> <img src="${gameOfThronesCharacters[0].picture}"> </td>
-                                <td class="bio">${gameOfThronesCharacters[0].bio} </td>
-                                <td class="buttonEdit"> <input type="button" value="edit"> </td>
-                                <td class="buttonDelete"> <input type="button" value="delete"> </td>
-                            </tr>
-                        `;
-  for (var i = 1; i < gameOfThronesCharacters.length; i++) {
-    tableRow +=
-      `
-      <tr >
-      <td class="name">${gameOfThronesCharacters[i].name} </td>
-      <td class="portrait"><img src="${gameOfThronesCharacters[i].portrait}"> </td>
-      <td class="picture"><img src="${gameOfThronesCharacters[i].picture}"> </td>
-      <td  class="bio">${gameOfThronesCharacters[i].bio} </td>
-      <td class="buttonEdit"> <input type="button" value="edit"> </td>
-      <td class="buttonDelete"> <input type="button" value="delete"> </td>
-  </tr>
-                          `;
-  }
-  characterTablesElement.innerHTML = tableRow;
-}
-
-characterPage();
