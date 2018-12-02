@@ -63,14 +63,14 @@ function nav() {
     <a class="menu logo" href="index.html"><img src="/img/got logo.png" alt="" width="120px" /></a>
 </div>
 <div class="menu-bar">
-    <a class="menu" href="/html/characters.html">Characters</a>
+    <a class="menu" href="/characters.html">Characters</a>
 </div>
 <div class="dropdown">
     <a class="menu dropbtn">Statistics</a>
     <div class="dropdown-content">
         <a href="/html/dead_alive.html">Alive/dead</a>
-        <a href="/html/houses.html">Houses</a>
-        <a href="/html/organizations.html">Organizations</a>
+        <a href="/houses.html">Houses</a>
+        <a href="/organizations.html">Organizations</a>
     </div>
 </div>
 <div><a class="menu" href="/html/portraits.html">Portraits</a></div>

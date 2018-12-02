@@ -4,14 +4,13 @@
 }
 
 h1 {
-    color: black;
     text-align: center;
     font-family: "myFirstFont";
+    background: url("../img/tenor.gif");
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
-h1:hover {
-    color: red;
-}
 
 .footer {
     background-color: rgb(171, 172, 172);
@@ -23,16 +22,18 @@ h1:hover {
 }
 
 .main-nav {
-    background-color: rgba(256, 256, 256, 0.8);
+    background-color: rgba(228, 227, 227, 0.7);
     box-sizing: border-box;
     font-family: "myFirstFont";
     font-size: larger;
+    height: 75px;
     position: relative;
     width: 1140px;
     letter-spacing: 3px;
     text-align: center;
     z-index: 1;
 }
+
 
 .menu-bar {
     padding-top: 12px;
