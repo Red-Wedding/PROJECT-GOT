@@ -24,6 +24,11 @@ h1 {
   z-index: 1;
 }
 
+.picture {
+  position: relative;
+  top: 70px;
+}
+
 .menu-bar {
   padding-top: 12px;
   top: 0;
@@ -97,6 +102,7 @@ header {
   text-decoration: none;
   word-spacing: 4px;
   width: 300px;
+  z-index: 2;
 }
 
 .trailer:hover {
@@ -202,11 +208,6 @@ table {
 td {
   background-color: rgba(231, 230, 230, 0.216);
   border-radius: 10px
-}
-
-h1 {
-  text-align: center;
-  top: 20px;
 }
 
 .name {
