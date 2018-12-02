@@ -38,3 +38,16 @@ td {
     padding: 2em;
     width: 35em;
 }
+
+.footer {
+    box-sizing: border-box;
+    background-color: rgb(171, 172, 172);
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    height: 120px;
+    margin: auto;
+    padding: 15px;
+    position: relative;
+    margin-top: 5em;
+    width: 1140px;
+}
