@@ -4,39 +4,37 @@
 }
 
 html {
+    background: url("/extrapictures/bg7.jpg") no-repeat center center fixed;
+    background-size: cover;
     margin: 0 auto;
     width: 1140px;
-
-    background: url("/extrapictures/bg7.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
-.picture {
-    overflow: hidden;
-    width: 25%;
-    float: left;
-    text-align: center;
-}
-
-.picture img {
-
-    height: 200px;
-    width: 250px;
-    vertical-align: 1em;
-    border: 1px solid #021a40;
-
-}
-
-.picturecontainer {
-    margin: auto;
 }
 
 h1 {
-    text-align: center;
+    color: silver;
     font-family: "myFirstFont";
-    background: url("../img/tenor.gif");
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    text-align: center;
+}
+
+table,
+tr,
+td {
+    border: 3px;
+    border-color: rgba(122, 119, 122, 0.699);
+    border-style: outset;
+    font-size: 1.25em;
+    font-weight: 500;
+    margin: auto;
+    padding: 0.25em;
+    text-align: center;
+
+}
+
+.container__main {
+    background: rgba(255, 255, 255, 0.411);
+    border-radius: 4px;
+    margin: auto;
+    margin-top: 5em;
+    padding: 2em;
+    width: 35em;
+}
