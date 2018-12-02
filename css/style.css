@@ -11,12 +11,14 @@
   letter-spacing: 3px;
   position: fixed;
   text-align: center;
+  top: 0;
   width: 1140px;
   z-index: 1;
 }
 
 .menu-bar {
   padding-top: 12px;
+  top: 0;
 }
 
 .logo {
@@ -41,13 +43,18 @@ body {
   background: whitesmoke;
   margin: auto;
   width: 1140px;
+  box-sizing: border-box;
+}
 
+header {
+  width: 1140px
 }
 
 .menu {
   float: left;
   text-decoration: none;
   width: 20%;
+  box-sizing: border-box;
 }
 
 .menu:link {
@@ -74,11 +81,11 @@ body {
   color: white;
   font-family: "myFirstFont";
   height: 50px;
+  letter-spacing: 2px;
   padding: 17px 34px;
   position: absolute;
   right: 200px;
   top: 540px;
-  letter-spacing: 2px;
   text-decoration: none;
   word-spacing: 4px;
   width: 300px;
@@ -109,16 +116,17 @@ footer img {
 }
 
 .footer-dead {
+  box-sizing: border-box;
   position: absolute;
-  padding: 15px;
   background-color: rgb(171, 172, 172);
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
-  margin: auto;
   height: 120px;
+  margin: auto;
+  padding: 15px;
+  top: 3500px;
   width: 1140px;
-  box-sizing: border-box;
-  top: 3850px
+  box-sizing: border-box
 }
 
 
@@ -154,25 +162,27 @@ footer img {
 }
 
 .img {
-  margin-top: 70px;
+  margin-top: 50px;
+  margin: auto;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .dead-alive {
   color: white;
   font-family: "Montserrat", sans-serif;
   position: absolute;
-  right: 470px;
-  top: 350px;
+  right: 460px;
+  top: 280px;
 }
 
 .container {
   color: black;
+  float: left;
   font-family: "Montserrat", sans-serif;
-  position: relative;
   margin-top: 50px;
   margin: auto;
-  float: left;
+  position: relative;
   width: 50%;
 }
 
@@ -183,25 +193,28 @@ table {
 }
 
 td {
-  width: 30%;
+  background-color: rgba(231, 230, 230, 0.216);
+  border-radius: 10px
 }
 
 h1 {
+  text-align: center;
   top: 20px;
-  text-align: center
-}
-
-.portrait {
-  text-align: center
 }
 
 .name {
-  text-align: left
+  text-align: center;
+  height: 50px;
+  widows: 100px;
+  background-color: rgba(80, 80, 80, 0.153)
 }
 
-.numberOfDead,
-.numberOfLiving {
+.numberOfDead {
   position: relative;
   top: 80px;
-  font-family: "Montserrat", sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.main {
+  background: url("/img/dragon.jpg") no-repeat center center fixed;
 }

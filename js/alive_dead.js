@@ -16,7 +16,6 @@ function living() {
     if (gameOfThronesCharacters[i].dead !== true) {
       tableRowLiving += `
             <tr id="table-living">
-            <td class="portrait"><img src = "/${gameOfThronesCharacters[i].portrait}" alt="" height="50" ></img></td>
               <td class="name">  ${gameOfThronesCharacters[i].name}</td>
             </tr>
   `;
@@ -32,7 +31,6 @@ function dead() {
     if (gameOfThronesCharacters[i].dead === true) {
       tableRowDead += `
             <tr id="table-dead" class="table-dead">
-            <td class="portrait"><img src = "/${gameOfThronesCharacters[i].portrait}" alt="" height="50" ></img></td>
               <td class="name">${gameOfThronesCharacters[i].name}</td>
             </tr>       
   `;
@@ -86,7 +84,6 @@ function numbers() {
   var numberOfDead = document.getElementById('container-dead').rows.length;
   var numberOfLiving = document.getElementById('container-living').rows.length;
 
-  document.getElementById('numberOfDead').innerHTML = `The total number of <u>dead people</u> until season 3 is <u>${numberOfDead}</u>.`;
-  document.getElementById('numberOfLiving').innerHTML = `The total number of <u>living people</u> until season 3 is <u>${numberOfLiving}</u>.`;
+  document.getElementById('numberOfDead').innerHTML = `Until the end of Season three <u>${numberOfDead}</u> people have died and <u>${numberOfLiving}</u> are still living.`;
 }
 numbers();
