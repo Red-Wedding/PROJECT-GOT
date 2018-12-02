@@ -1,0 +1,40 @@
+@font-face {
+    font-family: "myFirstFont";
+    src: url("/font/Game\ of\ Thrones\ 2.ttf");
+}
+
+html {
+    background: url("/extrapictures/bg7.jpg") no-repeat center center fixed;
+    background-size: cover;
+    margin: 0 auto;
+    width: 1140px;
+}
+
+h1 {
+    color: silver;
+    font-family: "myFirstFont";
+    text-align: center;
+}
+
+table,
+tr,
+td {
+    border: 3px;
+    border-color: rgba(122, 119, 122, 0.699);
+    border-style: outset;
+    font-size: 1.25em;
+    font-weight: 500;
+    margin: auto;
+    padding: 0.25em;
+    text-align: center;
+
+}
+
+.container__main {
+    background: rgba(255, 255, 255, 0.411);
+    border-radius: 4px;
+    margin: auto;
+    margin-top: 5em;
+    padding: 2em;
+    width: 35em;
+}
