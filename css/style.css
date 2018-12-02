@@ -109,6 +109,7 @@ footer img {
   top: 200px;
 }
 
+
 .dropdown-content {
   background-color: #f1f1f1;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
@@ -165,5 +166,5 @@ footer img {
 
 div table {
   position: relative;
-  margin: auto
+  margin-left: 180px;
 }
