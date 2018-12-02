@@ -45,3 +45,18 @@ function organizationsTableFill() {
   characterTablesElement.innerHTML = tableRow;
 }
 organizationsTableFill();
+
+function footer() {
+  var footerElement = document.getElementById('footer');
+  var row =
+    `
+    <p><b>OFFICIAL GAME OF THRONES WEBSITE - team RED WEDDING</b></p>
+    <p>Follow us</p>
+    <a href="http://facebook.com"><img src="/img/facebook.png" alt="facebook" /></a>
+    <a href="http://instagram.com"><img src="/img/Instagram.png" alt="Instagram" /></a>
+    <a href="http://youtube.com"><img src="/img/youtube.png" alt="youtube" /></a>
+    <a href="http://twitter.com"><img src="/img/twitter.svg" alt="twitter" /></a>
+  `;
+  footerElement.innerHTML = row;
+}
+footer();
