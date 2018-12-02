@@ -3,6 +3,17 @@
     src: url("/font/Game\ of\ Thrones\ 2.ttf");
 }
 
+h1 {
+    color: black;
+    text-align: center;
+    font-family: "myFirstFont";
+    -webkit-background-clip: text;
+}
+
+h1:hover {
+    color: red;
+}
+
 .footer {
     background-color: rgb(171, 172, 172);
     font-family: "Montserrat", sans-serif;
@@ -109,6 +120,7 @@
 
 .name:hover {
     background: rgba(99, 99, 99, 0.3);
+    color: red;
 }
 
 .house {
@@ -158,7 +170,9 @@ input[type=button] {
 }
 
 input[type=button]:hover {
+    color: red;
     background: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
 }
 
 footer img {
