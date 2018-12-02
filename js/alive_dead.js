@@ -11,19 +11,14 @@ function sortOn(arr, prop) {
 sortOn(gameOfThronesCharacters, 'name');
 
 function living() {
-  var tableRowLiving = '<h1><u>Living</u></h1>';
+  var tableRowLiving = '';
   for (var i = 0; i < gameOfThronesCharacters.length; i++) {
     if (gameOfThronesCharacters[i].dead !== true) {
       tableRowLiving += `
-
-      <table id="table-living">
-          <tbody>
-            <tr>
-            <td><img src = "/${gameOfThronesCharacters[i].portrait}" alt="" height="50" ></img></td>
-              <td>${gameOfThronesCharacters[i].name}</td><br>
+            <tr id="table-living">
+            <td class="portrait"><img src = "/${gameOfThronesCharacters[i].portrait}" alt="" height="50" ></img></td>
+              <td class="name">  ${gameOfThronesCharacters[i].name}</td>
             </tr>
-            </tbody>
-        </table>       
   `;
     }
     document.getElementById('container-living').innerHTML = tableRowLiving;
@@ -32,23 +27,17 @@ function living() {
 living();
 
 function dead() {
-  var tableRowDead = '<h1><u>Dead</u></h1>';
+  var tableRowDead = '';
   for (var i = 0; i < gameOfThronesCharacters.length; i++) {
     if (gameOfThronesCharacters[i].dead === true) {
       tableRowDead += `
-
-      <table id="table-dead" class="table-dead">
-          <tbody>
-            <tr>
-            <td><img src = "/${gameOfThronesCharacters[i].portrait}" alt="" height="50" ></img></td>
-              <td>${gameOfThronesCharacters[i].name}</td><br>
-            </tr>
-            </tbody>
-        </table>       
+            <tr id="table-dead" class="table-dead">
+            <td class="portrait"><img src = "/${gameOfThronesCharacters[i].portrait}" alt="" height="50" ></img></td>
+              <td class="name">${gameOfThronesCharacters[i].name}</td>
+            </tr>       
   `;
     }
     document.getElementById('container-dead').innerHTML = tableRowDead;
-    console.log(tableRowDead);
   }
 }
 dead();
@@ -67,3 +56,37 @@ function footer() {
   footerElement.innerHTML = row;
 }
 footer();
+
+function nav() {
+  var navElement = document.querySelector('#nav');
+  var row =
+    `
+    <div class="menu-bar">
+    <a class="menu logo" href="index.html"><img src="/img/got logo.png" alt="" width="120px" /></a>
+</div>
+<div class="menu-bar">
+    <a class="menu" href="/html/characters.html">Characters</a>
+</div>
+<div class="dropdown">
+    <a class="menu dropbtn">Statistics</a>
+    <div class="dropdown-content">
+        <a href="/html/dead_alive.html">Alive/dead</a>
+        <a href="/html/houses.html">Houses</a>
+        <a href="/html/organizations.html">Organizations</a>
+    </div>
+</div>
+<div><a class="menu" href="/html/portraits.html">Portraits</a></div>
+<div><a class="menu" href="/html/gallery.html">Gallery</a></div>
+  `;
+  navElement.innerHTML = row;
+}
+nav();
+
+function numbers() {
+  var numberOfDead = document.getElementById('container-dead').rows.length;
+  var numberOfLiving = document.getElementById('container-living').rows.length;
+
+  document.getElementById('numberOfDead').innerHTML = `The total number of <u>dead people</u> until season 3 is <u>${numberOfDead}</u>.`;
+  document.getElementById('numberOfLiving').innerHTML = `The total number of <u>living people</u> until season 3 is <u>${numberOfLiving}</u>.`;
+}
+numbers();

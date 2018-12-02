@@ -47,7 +47,6 @@ body {
 .menu {
   float: left;
   text-decoration: none;
-  vertical-align: bottom;
   width: 20%;
 }
 
@@ -100,13 +99,26 @@ footer img {
   width: 20px;
 }
 
-.footer {
+.footer-index {
   background-color: rgb(171, 172, 172);
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   padding: 10px 0 20px 30px;
   position: relative;
   top: 200px;
+}
+
+.footer-dead {
+  position: absolute;
+  padding: 15px;
+  background-color: rgb(171, 172, 172);
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  margin: auto;
+  height: 120px;
+  width: 1140px;
+  box-sizing: border-box;
+  top: 3850px
 }
 
 
@@ -159,12 +171,37 @@ footer img {
   font-family: "Montserrat", sans-serif;
   position: relative;
   margin-top: 50px;
-  text-align: center;
+  margin: auto;
   float: left;
   width: 50%;
 }
 
-div table {
+table {
   position: relative;
-  margin-left: 180px;
+  text-align: center;
+  top: 40px;
+}
+
+td {
+  width: 30%;
+}
+
+h1 {
+  top: 20px;
+  text-align: center
+}
+
+.portrait {
+  text-align: center
+}
+
+.name {
+  text-align: left
+}
+
+.numberOfDead,
+.numberOfLiving {
+  position: relative;
+  top: 80px;
+  font-family: "Montserrat", sans-serif;
 }
