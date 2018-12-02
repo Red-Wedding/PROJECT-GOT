@@ -41,9 +41,9 @@
 
 body {
   background: whitesmoke;
+  box-sizing: border-box;
   margin: auto;
   width: 1140px;
-  box-sizing: border-box;
 }
 
 header {
@@ -51,10 +51,10 @@ header {
 }
 
 .menu {
+  box-sizing: border-box;
   float: left;
   text-decoration: none;
   width: 20%;
-  box-sizing: border-box;
 }
 
 .menu:link {
@@ -117,16 +117,15 @@ footer img {
 
 .footer-dead {
   box-sizing: border-box;
-  position: absolute;
   background-color: rgb(171, 172, 172);
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   height: 120px;
   margin: auto;
   padding: 15px;
+  position: absolute;
   top: 3500px;
   width: 1140px;
-  box-sizing: border-box
 }
 
 
@@ -162,10 +161,10 @@ footer img {
 }
 
 .img {
+  box-sizing: border-box;
   margin-top: 50px;
   margin: auto;
   width: 100%;
-  box-sizing: border-box;
 }
 
 .dead-alive {
@@ -203,16 +202,15 @@ h1 {
 }
 
 .name {
-  text-align: center;
+  background-color: rgba(80, 80, 80, 0.153);
   height: 50px;
-  widows: 100px;
-  background-color: rgba(80, 80, 80, 0.153)
+  text-align: center;
 }
 
 .numberOfDead {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   position: relative;
   top: 80px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
 
 .main {
