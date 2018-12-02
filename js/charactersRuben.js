@@ -1,3 +1,5 @@
+/* globals gameOfThronesCharacters*/
+
 function nav() {
   var navElement = document.querySelector('#nav');
   var row =
@@ -24,7 +26,7 @@ function nav() {
 
 function characterPage() {
   var characterTablesElement = document.querySelector('#characters');
-  var bioJon = `<textarea class="bio" cols="60" rows="8" onclick="this.focus();this.select()">${gameOfThronesCharacters[0].bio} </textarea>`;
+  var bioJon = `<textarea class="bio" cols="60" rows="8" onclick="this.focus();this.select()" disabled>${gameOfThronesCharacters[0].bio} </textarea>`;
   var cimerJon = '';
   var houseJon = '';
   if (gameOfThronesCharacters[0].house) {
@@ -38,13 +40,13 @@ function characterPage() {
                                   <td class="portrait"> <img src="${gameOfThronesCharacters[0].portrait}">  </td>
                                   <td class="cimer"> ${cimerJon}</td>
                                   <td class="house"> ${houseJon}</td>
-                                  <td>${bioJon}</td>
-                                  <td class="buttonEdit"> <input type="button" value="edit" onclick="editBio()"> </td>
+                                  <td id="bioText${0}">${bioJon}</td>
+                                  <td class="buttonEdit"> <input type="button" value="edit" onclick="editRow('${0}')"> </td>
                                   <td class="buttonDelete"> <input type="button" value="delete" onclick="deleteRow()"> </td>
                               </tr>
                           `;
   for (var i = 1; i < gameOfThronesCharacters.length; i++) {
-    var bio = `<textarea class="bio" cols="60" rows="8" onclick="this.focus();this.select()">${gameOfThronesCharacters[i].bio} </textarea>`;
+    var bio = `<textarea class="bio" cols="60" rows="8" onclick="this.focus();this.select()" disabled>${gameOfThronesCharacters[i].bio} </textarea>`;
     var cimer = '';
     var house = '';
     if (gameOfThronesCharacters[i].house) {
@@ -60,8 +62,8 @@ function characterPage() {
         <td class="portrait"><img src="${gameOfThronesCharacters[i].portrait}"> </td>
         <td class="cimer"> ${cimer}</td>
         <td class="house"> ${house}</td>
-        <td>${bio}</td>
-        <td class="buttonEdit"> <input type="button" value="edit"> </td>
+        <td id="bioText${i}">${bio}</td>
+        <td class="buttonEdit"> <input type="button" value="edit" onclick="editRow('${i}')"> </td>
         <td class="buttonDelete"> <input type="button" value="delete" onclick="deleteRow()"> </td>
     </tr>
                             `;
@@ -81,6 +83,11 @@ function footer() {
     <a href="http://twitter.com"><img src="/img/twitter.svg" alt="twitter" /></a>
   `;
   footerElement.innerHTML = row;
+}
+
+function editRow(no) {
+  var bio = document.getElementById('bioText' + no);
+  bio.innerHTML = `<textarea class="bio" cols="60" rows="8" onclick="this.focus();this.select()">${gameOfThronesCharacters[no].bio} </textarea>`;
 }
 
 function deleteRow() {
