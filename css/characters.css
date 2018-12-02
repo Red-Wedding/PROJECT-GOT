@@ -7,7 +7,6 @@ h1 {
     color: black;
     text-align: center;
     font-family: "myFirstFont";
-    -webkit-background-clip: text;
 }
 
 h1:hover {
@@ -132,6 +131,10 @@ h1:hover {
     font-weight: 900;
 }
 
+.house:hover {
+    color: red;
+}
+
 .bio {
     background: rgba(137, 137, 160, 0.65);
     border-radius: 25px;
@@ -143,6 +146,10 @@ h1:hover {
     font-family: "myFirstFont";
     font-size: 13px;
     box-shadow: 5px 0px 5px rgb(136, 135, 135);
+}
+
+.bio:hover {
+    color: black;
 }
 
 .table {
