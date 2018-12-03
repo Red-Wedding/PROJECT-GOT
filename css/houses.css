@@ -16,11 +16,13 @@ td {
   border: 3px;
   border-color: rgba(122, 119, 122, 0.699);
   border-style: outset;
-  font-size: 1.25em;
+  font-family: "myFirstFont";
+  font-size: 1.1em;
   font-weight: 500;
   margin: auto;
   padding: 0.25em;
   text-align: center;
+}
 
 }
 

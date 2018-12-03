@@ -28,9 +28,9 @@ function housesTableFill() {
   var tableRow =
     `
     <tr >
-        <td class="cimer">Címer</td>
-        <td class="cimer">Ház neve</td>
-        <td class="house">Ház tagjainak száma</td>
+        <td class="cimer">Symbol</td>
+        <td class="cimer">House</td>
+        <td class="house">Members of house</td>
       </tr>
      `;
   for (var i = 0; i < arrOfHouses.length; i += 1) {

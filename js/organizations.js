@@ -27,9 +27,9 @@ function organizationsTableFill() {
   var tableRow =
     `
       <tr >
-        <td class="cimer">Címer</td>
-        <td class="cimer">Szervezet</td>
-        <td class="house">Szervezet tagjainak száma</td>
+        <td class="cimer">Symbol</td>
+        <td class="cimer">Organization</td>
+        <td class="house">Members of organization</td>
       </tr>
      `;
   for (var i = 0; i < arrOfOrganizations.length; i += 1) {
