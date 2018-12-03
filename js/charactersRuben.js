@@ -8,14 +8,14 @@ function nav() {
   <a class="menu logo" href="/html/index.html"><img src="/img/got logo.png" alt="" width="120px" /></a>
 </div>
 <div class="menu-bar">
-  <a class="menu" href="/characters.html" target="_self">Characters</a>
+  <a class="menu" href="/html/characters.html" target="_self">Characters</a>
 </div>
 <div class="dropdown">
   <a class="menu dropbtn">Statistics</a>
   <div class="dropdown-content">
     <a href="/html/dead_alive.html">Alive/dead</a>
-    <a href="/houses.html">Houses</a>
-    <a href="/organizations.html">Organizations</a>
+    <a href="/html/houses.html">Houses</a>
+    <a href="/html/organizations.html">Organizations</a>
   </div>
 </div>
 <div><a class="menu" href="/html/portraits.html">Portraits</a></div>
@@ -37,7 +37,7 @@ function characterPage() {
     `
                               <tr >
                                   <td class="name">${gameOfThronesCharacters[0].name} </td>
-                                  <td class="portrait"> <img src="${gameOfThronesCharacters[0].portrait}">  </td>
+                                  <td class="portrait"> <img src=/${gameOfThronesCharacters[0].portrait}>  </td>
                                   <td class="cimer"> ${cimerJon}</td>
                                   <td class="house"> ${houseJon}</td>
                                   <td id="bioText${0}">${bioJon}</td>
@@ -59,7 +59,7 @@ function characterPage() {
       `
         <tr >
         <td class="name">${gameOfThronesCharacters[i].name} </td>
-        <td class="portrait"><img src="${gameOfThronesCharacters[i].portrait}"> </td>
+        <td class="portrait"><img src=/${gameOfThronesCharacters[i].portrait}> </td>
         <td class="cimer"> ${cimer}</td>
         <td class="house"> ${house}</td>
         <td id="bioText${i}">${bio}</td>
