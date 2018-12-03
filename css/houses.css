@@ -25,11 +25,11 @@ td {
 }
 
 h1 {
-  color: rgb(236, 236, 236);
-  font-family: "myFirstFont";
-  size: 100px;
   text-align: center;
-  text-shadow: 10px;
+  font-family: "myFirstFont";
+  background: url("../img/tenor.gif");
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 .container__main {

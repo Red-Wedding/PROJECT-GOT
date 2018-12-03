@@ -15,9 +15,11 @@ body {
 }
 
 h1 {
-    color: silver;
-    font-family: "myFirstFont";
     text-align: center;
+    font-family: "myFirstFont";
+    background: url("../img/tenor.gif");
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 table,
